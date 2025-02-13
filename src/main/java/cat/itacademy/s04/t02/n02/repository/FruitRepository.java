@@ -7,4 +7,6 @@ import java.util.Optional;
 
 public interface FruitRepository extends JpaRepository<Fruit, Integer> {
     Optional<Fruit> findByName(String name);
+
+    boolean existsByNameAndIdNot(String name, int id);
 }
